@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>营养干预</title>
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+		<!-- head 中 -->
+		<link rel="stylesheet" type="text/css" href="style/weui.min.css">
+		<link rel="stylesheet" type="text/css" href="style/jquery-weui.min.css">
+		<link rel="stylesheet" href="style/style.css">
+	</head>
+	<body>
+		<div class="app">
+			<div class="surver-view v-transition">
+				<div class="result" style="display: none;">
+					<div class="hello">
+						<div class="helloup">
+							<div class="question1 jieguohtml">
+								你的营养筛查总分是【<span id="fenshu"></span>】分 <br>
+								根据欧洲肠外肠内营养学会（ESPEN）推荐的筛查方法---营养风险筛查2002（NRS 2002）结果显示： <br>
+								<span id="jianyi"></span>
+							</div>
+							<div class="middle">
+								<div class="empty">
+								</div>
+								<div class="doc">
+								</div>
+							</div>
+						</div>
+						<div class="begin">
+							<label id="restart" class="answer-content answer-content-next answer-content-dcell">重新评估</label>
+						</div>
+					</div>
+				</div>
+				<div class="wenjuan">
+					<div style="display:block;">
+						<div class="hello hello2">
+							<div class="helloup">
+								<div class="question1">
+									营养筛查
+								</div>
+								<div class="middle">
+									<div class="empty">
+									</div>
+									<div class="doc">
+									</div>
+									<div class="info">
+										<div class="test-item">
+											<div class="title">用时:</div>
+											<div class="content">约30秒</div>
+										</div>
+										<div class="test-item">
+											<div class="title">评估依据:
+											</div>
+											<div class="content">NRS 2002是欧洲肠内肠外营养学会(ESPEN）发展的一个有客观依据的营养风险筛查工具，信度和效度在欧洲已得到验证。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="begin">
+								<label id="start" class="answer-content answer-content-next answer-content-dcell">开始评估</label>
+							</div>
+						</div>
+						<div class="questionlist">
+							<!--问题1-->
+							<div class="question page-wrap" id="qqq0">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">您是否已购买呵本系列特殊医学用途配方产品？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">1</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-0">
+												<label fen="1" class="answer-content answer-content-dcell" for="rd10-0">已购买，希望通过营养评估精准计算每天需要量
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="0" class="answer-content answer-content-dcell" for="rd10-1">未购买，希望通过营养评估找到个性化的营养干预办法
+												</label>
+											</span>
+											
+											
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<!--问题1END-->
+							<!--问题2-1-->
+							<div class="question page-wrap" id="qqq11">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												请问您购买的是哪款产品？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">2-1</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-4">
+										<div fen="0" class="yuan bt-item">整蛋白</div>
+									</div>
+									<div class="col-4">
+										<div fen="1" class="yuan bt-item">短肽</div>
+									</div>
+									<div class="col-4">
+										<div fen="2" class="yuan bt-item">呵童</div>
+									</div>
+									<div class="line">	</div>
+									<div class="col-4">
+										<div fen="3" class="yuan bt-item">健素</div>
+									</div>
+									<div class="col-4">
+										<div fen="4" class="yuan bt-item">保素</div>
+									</div>
+									<div class="col-4">
+										<div fen="5" class="yuan bt-item">康素</div>
+									</div>
+									<div class="line">	</div>
+									<div class="col-4">
+										<div fen="6" class="yuan bt-item">呵肾</div>
+									</div>
+									<div class="col-4">
+										<div fen="7" class="yuan bt-item">呵透</div>
+									</div>
+									
+								</div>
+							</div>
+							<!--问题2-1END-->
+							<!--问题2-2-->
+							<div class="question page-wrap" id="qqq12">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												您现在处于哪种疾病状态？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">2-2</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="0" class="answer-content answer-content-dcell" for="rd10-1">日常营养摄入不足、厌食、体弱多病、低蛋白血症患者
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="1" class="answer-content answer-content-dcell" for="rd10-1">手术前后及恢复期的患者
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="2" class="answer-content answer-content-dcell" for="rd10-1">吞咽或咀嚼困难者、意识障碍或昏迷者
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="3" class="answer-content answer-content-dcell" for="rd10-1">危重疾病患者（如大手术后的恢复期，严重烧伤、创伤）
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="4" class="answer-content answer-content-dcell" for="rd10-1">肿瘤患者
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="5" class="answer-content answer-content-dcell" for="rd10-1">肾病患者
+												</label>
+											</span>
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题2-2END-->
+							<!--问题2-2-1-->
+							<div class="question page-wrap" id="qqq121">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												您现在处于肿瘤的哪个阶段？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">2-2-1</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="0" class="answer-content answer-content-dcell" for="rd10-1">放化疗期
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="1" class="answer-content answer-content-dcell" for="rd10-1">晚期
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="2" class="answer-content answer-content-dcell" for="rd10-1">其他
+												</label>
+											</span>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题2-2-1END-->
+							<!--问题2-2-2-->
+							<div class="question page-wrap" id="qqq122">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												您现在处于肾病的哪个阶段？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">2-2-2</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="0" class="answer-content answer-content-dcell" for="rd10-1">非透析期
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="1" class="answer-content answer-content-dcell" for="rd10-1">非透析期
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd10-1">
+												<label fen="2" class="answer-content answer-content-dcell" for="rd10-1">其他
+												</label>
+											</span>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题2-2-2END-->
+							<!--问题3-->
+							<div class="question page-wrap" id="qqq2">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												请问您的出生日期？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">3</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												出生日期：<input type="text" id="birthday" />
+											</span>
+											
+										</div>
+									</div>
+									<label class="answer-content answer-content-next answer-content-dcell">下一题</label>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题3END-->
+							<!--问题4-->
+							<div class="question page-wrap" id="qqq3">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+											请问您的性别？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">4</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap bgno">
+											<span>
+												<div sex ="1" class="sex sex-wrap">女</div>
+											</span>
+											<div class="line2"></div>
+											<span>
+												<div sex ="0" class="sex sex-wrap">男</div>
+											</span>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题4END-->
+							<!--问题5-->
+							<div class="question page-wrap" id="qqq4">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												请问您的身高？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">5</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												身高： <input id="shengao" type="text" name="" value="165">CM
+											</span>
+											
+										</div>
+									</div>
+									<label class="answer-content answer-content-next answer-content-dcell">下一题</label>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--问题END-->
+							<!--q6-->
+							<div class="question page-wrap" id="qqq5">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												请问您的体重？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">6</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												体重： <input id="tizhong" type="text" name="" value="110">斤
+											</span>
+											
+										</div>
+									</div>
+									<label class="answer-content answer-content-next answer-content-dcell">下一题</label>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--q6END-->
+							<!--q7-->
+							<div class="question page-wrap" id="qqq6">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												您的身体活动量如何？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">7</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd70-0">
+												<label fen="0" class="yes answer-content answer-content-dcell" for="rd70-0">休息，主要是坐位或卧位。例如生活不能自理的老人
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd70-1">
+												<label fen="1" class="no answer-content answer-content-dcell" for="rd70-1">坐位工作，很少或没有重体力的休闲活动。例如办公室职员
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd70-2">
+												<label fen="2" class="no answer-content answer-content-dcell" for="rd70-2">坐位工作，有时需走动或站立，但很少有重体力的休闲活动。例如学生、司机
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd70-3">
+												<label fen="3" class="no answer-content answer-content-dcell" for="rd70-3">主要是站着或走着工作。例如家庭主妇，销售人员，侍应生
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd70-4">
+												<label fen="4" class="no answer-content answer-content-dcell" for="rd70-4">重体力职业工作或重体力休闲活动方式。例如建筑工人、运动员
+												</label>
+											</span>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--q7END-->
+							<!--q8-->
+							<div class="question page-wrap" id="qqq7">
+								<div class="row">
+									<div class="welcome-main col-12">
+										<div class="img-doc-s" id="img-doc">
+										</div>
+										<div class="question111">
+											<div class="question-content">
+												您最近7天的进食量如何？
+											</div>
+										</div>
+										<div class="q-index"> <span class="item">8</span>/8</div>
+									</div>
+									<div class="col-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="answer-wrap">
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd80-0">
+												<label fen="0" class="yes answer-content answer-content-dcell" for="rd80-0">完全不能进食
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd80-1">
+												<label fen="1" class="no answer-content answer-content-dcell" for="rd80-1">能进食但食欲减退，进食量是以前的25%
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd80-2">
+												<label fen="2" class="no answer-content answer-content-dcell" for="rd80-2">能进食但食欲减退，进食量是以前的50%
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd80-3">
+												<label fen="3" class="no answer-content answer-content-dcell" for="rd80-3">能进食但食欲减退，进食量是以前的75%
+												</label>
+											</span>
+											<span>
+												<input type="radio" name="rd10" value="0" id="rd80-4">
+												<label fen="4" class="no answer-content answer-content-dcell" for="rd80-4">进食情况良好，较以前没有改变
+												</label>
+											</span>
+										</div>
+									</div>
+									<div class="row">
+										<div style="display:block;">
+											<div class="col-12 hr-divide">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--q8END-->
+						</div>
+					</div>
+					<div class="foot-slogan"> <p>-- 妙客网络 --</p> </div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+		<script src="js/jquery-weui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-bbq.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		</script>
+	</body>
+</html>
